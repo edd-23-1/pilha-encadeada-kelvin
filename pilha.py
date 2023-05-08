@@ -32,7 +32,15 @@ class Pilha:
 
     def pop(self) -> No:
         # implementação do método
-        pass
+        if self.is_empty():
+            return None
+        
+        else:
+            noRemovido = self.__topo
+            self.__topo = self.__topo.prox
+            noRemovido.prox = None
+            self.__qtdItens -= 1
+            return noRemovido
 
 
     def peek(self) -> No:
