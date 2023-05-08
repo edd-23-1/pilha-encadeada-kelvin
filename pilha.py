@@ -45,7 +45,11 @@ class Pilha:
 
     def peek(self) -> No:
         # implementação do método
-        pass
+        if self.is_empty():
+            return None
+        
+        else:
+            return self.__topo
 
 
     def list_items(self) -> list[str]:
