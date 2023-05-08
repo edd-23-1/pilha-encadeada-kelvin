@@ -59,4 +59,4 @@ class Pilha:
     
     def get_size(self) -> int:
         # implementação do método
-        pass
+        return self.__qtdItens
