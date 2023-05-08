@@ -10,7 +10,11 @@ class Pilha:
 
     def is_empty(self) -> bool:
         # implementação do método
-        pass
+        if self.__topo is None:
+            return True
+        
+        else:
+            return len(self.__topo) == 0
 
 
     def push(self, valor) -> bool:
@@ -31,8 +35,8 @@ class Pilha:
     def list_items(self) -> list[str]:
         # implementação do método
         pass
-    
 
+    
     def get_size(self) -> int:
         # implementação do método
         pass
