@@ -19,15 +19,14 @@ class Pilha:
 
     def push(self, valor) -> bool:
         # implementação do método
-        if (self.__qtdItens) == (self.__capacidade):
+        if self.__qtdItens == self.__capacidade:
             return False
         
-        else:
-            novoNo = No(valor)
-            novoNo.prox = (self.__topo)
-            self.__topo = novoNo
-            self.__qtdItens += 1
-            return True
+        novoNo = No(valor)
+        novoNo.prox = self.__topo
+        self.__topo = novoNo
+        self.__qtdItens += 1
+        return True
 
 
     def pop(self) -> No:
