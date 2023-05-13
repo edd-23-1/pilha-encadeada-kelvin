@@ -10,11 +10,7 @@ class Pilha:
 
     def is_empty(self) -> bool:
         # implementação do método
-        if self.__topo is None:
-            return True
-        
-        else:
-            return len(self.__topo) == 0
+        return self.__topo is None
 
 
     def push(self, valor) -> bool:
