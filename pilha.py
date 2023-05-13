@@ -49,17 +49,15 @@ class Pilha:
 
     def list_items(self) -> list[str]:
         # implementação do método
-        if self.is_empty():
-            return ['Topo da Pilha:\n', 'Base da Pilha\n']
-        else:
-            lista = ['Topo da Pilha:\n']
-            noAtual = self.__topo
+        lista = ["Topo da Pilha:\n"]
+        noAtual = self.__topo
 
-            while noAtual:
-                lista.append(noAtual.dado)
-                noAtual = noAtual.prox
-            lista.append('Base da Pilha\n')
-            return lista
+        while noAtual is not None:
+            lista.append(f"{noAtual.dado}\n")
+            noAtual = noAtual.prox
+
+        lista.append("Base da Pilha\n")
+        return lista
 
     
     def get_size(self) -> int:
